@@ -20,7 +20,7 @@ class Cookie {
     }
 
     public function delete(string $key){
-        setcookie($key, null, -1);
+        setcookie($key, '', -1);
         $this->trait_delete($key);
     }
 
