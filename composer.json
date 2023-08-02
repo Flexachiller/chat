@@ -1,0 +1,16 @@
+{
+    "name": "flexachiller/chat",
+    "type": "project",
+    "autoload":{
+        "psr-4":{
+            "flexachiller\\chat\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Flexachiller",
+            "email": "krishtalev2017r@yandex.ru"
+        }
+    ],
+    "require": {}
+}

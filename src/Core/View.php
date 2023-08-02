@@ -1,5 +1,7 @@
 <?php
 
+namespace flexachiller\chat\Core;
+
 class View{
 
     public function render(string $template_name, array $params = []){

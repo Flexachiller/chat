@@ -1,5 +1,10 @@
 <?php
 
+namespace flexachiller\chat\Core;
+
+use flexachiller\chat\Controller\ChatController;
+use flexachiller\chat\Controller\LoginController;
+
 class Router{
 
     private array $routes = [
@@ -10,7 +15,7 @@ class Router{
 
     public function run(){
         $uri = $_SERVER['REQUEST_URI'];
-        var_dump($uri);
+        
         if(!isset($this->routes[$uri])){
             echo '404<br>';
             echo '<a href="/chat/">Вернуться на главную</a>';

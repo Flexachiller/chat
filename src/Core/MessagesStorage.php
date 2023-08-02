@@ -1,4 +1,7 @@
 <?php
+
+namespace flexachiller\chat\Core;
+
 class MessagesStorage{
 
     private array $messages;

@@ -1,4 +1,7 @@
 <?php
+
+namespace flexachiller\chat\Core;
+
 require_once "ServerArrayAccessTrait.php";
 
 class Post{

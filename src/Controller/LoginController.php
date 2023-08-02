@@ -1,5 +1,12 @@
 <?php
 
+namespace flexachiller\chat\Controller;
+
+use flexachiller\chat\Core\Cookie;
+use flexachiller\chat\Core\Post;
+use flexachiller\chat\Core\Session;
+use flexachiller\chat\Core\View;
+
 class LoginController{
     public function main_action(){
         $session = new Session();

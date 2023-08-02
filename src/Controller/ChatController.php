@@ -1,5 +1,13 @@
 <?php
 
+namespace flexachiller\chat\Controller;
+
+use flexachiller\chat\Core\Cookie;
+use flexachiller\chat\Core\MessagesStorage;
+use flexachiller\chat\Core\Post;
+use flexachiller\chat\Core\Session;
+use flexachiller\chat\Core\View;
+
 class ChatController{
     public function main_action(){
         $messages_storage = new MessagesStorage();

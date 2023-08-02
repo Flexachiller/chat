@@ -1,5 +1,7 @@
 <?php
 
+namespace flexachiller\chat\Core;
+
 trait MutableServerArrayTrait{
 
     private array $server_array;

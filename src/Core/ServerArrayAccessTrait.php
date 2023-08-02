@@ -1,5 +1,7 @@
 <?php
 
+namespace flexachiller\chat\Core;
+
 trait ServerArrayAccessTrait{
 
     private array $server_array;
