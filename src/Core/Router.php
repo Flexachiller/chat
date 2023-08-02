@@ -2,16 +2,23 @@
 
 class Router{
 
-    public function run(){
-        $session_storage = new Session();
-        $login = $session_storage->get("login", null);
+    private array $routes = [
+        '/chat/'=>[ChatController::class],
+        '/chat/login'=>[LoginController::class],
+        '/chat/logout'=>[LoginController::class, 'logout_action']
+    ];
 
-        if(!$login){
-            $login_controller = new LoginController();
-            $login_controller->main_action();
-        }else{
-            $chat_controller = new ChatController();
-            $chat_controller->main_action();
+    public function run(){
+        $uri = $_SERVER['REQUEST_URI'];
+        var_dump($uri);
+        if(!isset($this->routes[$uri])){
+            echo '404<br>';
+            echo '<a href="/chat/">Вернуться на главную</a>';
+            return;
         }
+
+        $controller = new $this->routes[$uri][0];
+        $action = $this->routes[$uri][1] ?? "main_action";
+        $controller->$action();
     }
 }

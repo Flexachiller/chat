@@ -7,12 +7,25 @@ class LoginController{
         $view = new View();
         $cookie = new Cookie();
 
+        
+
         if(!$session->has('login') && $post->has('user_login')){
             $session->add('login', $post->get('user_login'));
         }
+
+        $login = $session->get('login');
+        if($login){
+            header('Location: /chat');
+        }
+
         $view->render('login', [
             'theme'=>$cookie->get('theme')
         ]);
     }
 
+    public function logout_action(){
+        $session = new Session();
+        $session->delete('login');
+        header('Location: /chat/login');
+}
 }
