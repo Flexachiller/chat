@@ -12,5 +12,7 @@
             "email": "krishtalev2017r@yandex.ru"
         }
     ],
-    "require": {}
+    "require": {
+        "gregwar/captcha": "^1.2"
+    }
 }

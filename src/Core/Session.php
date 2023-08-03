@@ -2,9 +2,6 @@
 
 namespace flexachiller\chat\Core;
 
-require_once "ServerArrayAccessTrait.php";
-require_once "MutableServerArrayTrait.php";
-
 class Session {
 
     use ServerArrayAccessTrait;

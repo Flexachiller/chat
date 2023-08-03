@@ -10,6 +10,8 @@
 <body>
     <form action="" method="post">
         <input type="text" name="user_login">
+        <img src="<?php echo $captcha?>" alt="">
+        <input type="text" name="captcha">
         <input type="submit" value="Login">
     </form>
 </body>
