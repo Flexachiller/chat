@@ -15,11 +15,10 @@ class Router{
 
     public function run(){
         $uri = $_SERVER['REQUEST_URI'];
-        
         if(!isset($this->routes[$uri])){
             echo '404<br>';
             echo '<a href="/chat/">Вернуться на главную</a>';
-            return;
+            exit;
         }
 
         $controller = new $this->routes[$uri][0];

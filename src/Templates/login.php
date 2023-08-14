@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="<?php echo $style;?>">
 </head>
 <body>
-    <form action="" method="post">
-        <input type="text" name="user_login">
-        <img src="<?php echo $captcha?>" alt="">
-        <input type="text" name="captcha">
+    <form method="post">
+        <label>Логин</label>
+        <input type="text" name="user_login"><br>
+        <img src="<?php echo $captcha?>" alt=""><br>
+        <input type="text" name="captcha"><br>
         <input type="submit" value="Login">
     </form>
 </body>

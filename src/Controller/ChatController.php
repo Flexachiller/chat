@@ -9,6 +9,7 @@ use flexachiller\chat\Core\Session;
 use flexachiller\chat\Core\View;
 
 class ChatController{
+    
     public function main_action(){
         $messages_storage = new MessagesStorage();
         $cookie = new Cookie();
